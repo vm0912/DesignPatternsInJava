@@ -15,7 +15,7 @@ public class SimpleLexer {
         for(int i=0; i<input.length(); ++i ){
             String element = String.valueOf(input.charAt(i));
             //throw IllegalArgumentException if the element is not in the list of allowed elements
-            if(!element.matches("[0-9)(/*+\\-]+")){
+            if(!element.matches("[0-9)(+\\-]+")){
                 throw new IllegalArgumentException("Invalid input...");
             }
             //store the element in the list

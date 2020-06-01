@@ -1,6 +1,8 @@
 package BehavioralDesignPatterns.Interpreter;
 
 
+import java.util.List;
+
 /**
  * Interpreter is a component that processes structured text data. Does so by turning it into
  * separate lexical tokens (lexing) and then interpreting sequences of said tokens (parsing).
@@ -11,8 +13,13 @@ package BehavioralDesignPatterns.Interpreter;
  */
 public class InterpreterDemo {
     public static void main(String[] args) {
-        String element = "1+2-3+55+(55-4)-455";
-        System.out.println(SimpleLexer.lex(element));
+        String element = "1+2";
+        List<Element> elements= SimpleLexer.lex(element);
+        System.out.println(elements);
+        System.out.println("here");
+        Evaluator evaluator = SimpleParser.parse(elements);
+        System.out.println(element+ " = "+ evaluator.evaluate());
+
 
     }
 }
