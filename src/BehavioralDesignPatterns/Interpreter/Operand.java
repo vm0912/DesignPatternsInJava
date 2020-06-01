@@ -12,4 +12,11 @@ public class Operand implements Evaluator {
     public int evaluate() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return "Operand{" +
+                "value=" + value +
+                '}';
+    }
 }

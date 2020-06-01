@@ -36,14 +36,23 @@ public class Operation implements Evaluator {
 
     @Override
     public int evaluate() {
-        switch (operationType){
 
-            case ADDITION:
-                return leftSide.evaluate() +rightSide.evaluate();
-            case SUBTRACTION:
-                return leftSide.evaluate() - rightSide.evaluate();
+            switch (operationType){
+                case ADDITION:
+                    return leftSide.evaluate() + rightSide.evaluate();
+                case SUBTRACTION:
+                    return leftSide.evaluate() - rightSide.evaluate();
+            }
 
-        }
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Operation{" +
+                "operationType=" + operationType +
+                ", leftSide=" + leftSide +
+                ", rightSide=" + rightSide +
+                '}';
     }
 }

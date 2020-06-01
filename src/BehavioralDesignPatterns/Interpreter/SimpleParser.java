@@ -14,8 +14,9 @@ public class SimpleParser {
         boolean leftSideEmpty = true;
         boolean insideParenthesis = false;
         for(Element element : elements){
-            if(insideParenthesis)
+            if(insideParenthesis){
                 continue;
+            }
             switch (element.elementType){
                 case OPERAND:
                     Operand operand = new Operand(Integer.parseInt(element.textualValue));
@@ -44,7 +45,8 @@ public class SimpleParser {
                             break;
                         }
                     }
-                    List<Element> subexpression = elements.subList(subexpressionStart,subexpressionEnd);
+                    List<Element> subexpression = elements.subList(subexpressionStart,subexpressionEnd+1);
+//                    System.out.println("subexpression "+ subexpression);
                     Evaluator evaluatedSubexpression = parse(subexpression);
                     if(leftSideEmpty){
                         result.setLeftSide(evaluatedSubexpression);
