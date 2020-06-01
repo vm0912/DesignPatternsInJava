@@ -39,6 +39,8 @@ public class SimpleLexer {
                         if(Character.isDigit(input.charAt(k))){
                             integerBuilder.append(input.charAt(k));
                             ++i;
+                        }else{
+                            break;
                         }
                     }
                     lexingOutput.add(new Element(Element.ElementType.OPERAND, integerBuilder.toString()));
