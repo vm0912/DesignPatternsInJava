@@ -26,12 +26,6 @@ public class SimpleLexer {
                 case "-":
                     lexingOutput.add(new Element(Element.ElementType.SUBTRACTION_OPERATOR, element ));
                     break;
-                case "*":
-                    lexingOutput.add(new Element(Element.ElementType.MULTIPLICATION_OPERATOR, element ));
-                    break;
-                case "/":
-                    lexingOutput.add(new Element(Element.ElementType.DIVISION_OPERATOR, element ));
-                    break;
                 case "(":
                     lexingOutput.add(new Element(Element.ElementType.LEFT_PARENTHESIS, element ));
                     break;
@@ -47,7 +41,7 @@ public class SimpleLexer {
                             ++i;
                         }
                     }
-                    lexingOutput.add(new Element(Element.ElementType.INTEGER, integerBuilder.toString()));
+                    lexingOutput.add(new Element(Element.ElementType.OPERAND, integerBuilder.toString()));
                     break;
             }
         }

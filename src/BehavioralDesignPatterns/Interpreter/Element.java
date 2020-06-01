@@ -4,9 +4,9 @@ package BehavioralDesignPatterns.Interpreter;
 public class Element {
 
     public enum ElementType{
-        INTEGER,
+        OPERAND,
         ADDITION_OPERATOR,
-        DIVISION_OPERATOR,
+        SUBTRACTION_OPERATOR,
         LEFT_PARENTHESIS,
         RIGHT_PARENTHESIS
     }

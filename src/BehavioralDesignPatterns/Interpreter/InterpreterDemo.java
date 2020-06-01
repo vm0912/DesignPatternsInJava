@@ -14,6 +14,5 @@ public class InterpreterDemo {
         String element = "1+2-3+55+(55-4)-455";
         System.out.println(SimpleLexer.lex(element));
 
-
     }
 }
