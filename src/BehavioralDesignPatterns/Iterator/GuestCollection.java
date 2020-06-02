@@ -1,9 +1,12 @@
 package BehavioralDesignPatterns.Iterator;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Spliterator;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * GuestCollection class implementation.
@@ -19,6 +22,7 @@ public class GuestCollection implements Iterable<Guest> {
 
     @Override
     public GuestIterator iterator() {
+        System.out.println("GuestIterator called");
         return new GuestIterator(guestList);
     }
 

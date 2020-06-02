@@ -23,7 +23,7 @@ public class IteratorDemo {
         }
         System.out.println("------------------");
         //using the enhanced for loop
-        for(Guest guest: guestList){
+        for(Guest guest: guests){
             System.out.println(guest);
         }
 
