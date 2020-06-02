@@ -18,7 +18,7 @@ public class GuestCollection implements Iterable<Guest> {
     }
 
     @Override
-    public Iterator<Guest> iterator() {
+    public GuestIterator iterator() {
         return new GuestIterator(guestList);
     }
 

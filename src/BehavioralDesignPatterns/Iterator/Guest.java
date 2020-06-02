@@ -53,4 +53,14 @@ public class Guest {
     public void setSpecialGuest(boolean specialGuest) {
         isSpecialGuest = specialGuest;
     }
+
+    @Override
+    public String toString() {
+        return "Guest{" +
+                "name='" + name + '\'' +
+                ", gender=" + gender +
+                ", email='" + email + '\'' +
+                ", isSpecialGuest=" + isSpecialGuest +
+                '}';
+    }
 }
