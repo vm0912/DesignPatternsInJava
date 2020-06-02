@@ -20,12 +20,12 @@ public class GuestIterator implements Iterator<Guest>  {
 
         @Override
         public boolean hasNext() {
-            return (position < guestList.size()-1);
+            return (position < guestList.size());
         }
 
         @Override
         public Guest next() {
-            return guestList.get(++position);
+            return guestList.get(position++);
         }
 
 }
