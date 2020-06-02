@@ -9,5 +9,25 @@ package BehavioralDesignPatterns.Memento;
 public class MementoDemo {
     public static void main(String[] args) {
 
+        TemperatureSensor sensor = new TemperatureSensor();
+        Memento memento1 = sensor.updateTemperature(27.00);
+        Memento memento2 = sensor.updateTemperature(31.00);
+        Memento memento3 = sensor.updateTemperature(26.00);
+        Memento memento4 = sensor.updateTemperature(28.00);
+
+        //retrieving current state
+        System.out.println(sensor);
+
+        //restoring the state from memento 2
+        sensor.restoreState(memento2);
+        System.out.println(sensor);
+
+        //restoring the state from memento 4
+        sensor.restoreState(memento4);
+        System.out.println(sensor);
+
+
+
+
     }
 }
