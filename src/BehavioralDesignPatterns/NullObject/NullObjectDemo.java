@@ -17,5 +17,7 @@ public class NullObjectDemo {
         //new sensor object referencing a nullObject
         TemperatureSensor temperatureSensor2 = new TemperatureSensor(new NullFunctionalityExpander());
         temperatureSensor2.updateTemperature(30.00);
+
+
     }
 }
