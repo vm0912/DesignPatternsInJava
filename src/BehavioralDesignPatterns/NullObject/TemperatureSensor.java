@@ -12,10 +12,10 @@ public class TemperatureSensor {
     public TemperatureSensor(FunctionalityExpander functionalityExpander){
         this.functionalityExpander = functionalityExpander;
     }
-    
+
     public void updateTemperature(double measuredCelsiusTemp){
         this.currentCelsiusTemperature = measuredCelsiusTemp;
-        System.out.format("Currently measured %.2f°C",measuredCelsiusTemp);
+        System.out.format("Currently measured %.2f°C\n",measuredCelsiusTemp);
         //if we do not provide an actual object, the NullPointerException will be thrown
         functionalityExpander.expandFunctionality(measuredCelsiusTemp);
     }
