@@ -14,7 +14,9 @@ public class YouTubeChannel {
     private String videoTitle;
     private PropertyChangeSupport support;
 
-    
+    public YouTubeChannel() {
+        this.support = new PropertyChangeSupport(this);
+    }
 
     public void addPropertyChangeListener(PropertyChangeListener pcl){
         support.addPropertyChangeListener(pcl);
