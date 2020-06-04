@@ -9,6 +9,10 @@ package BehavioralDesignPatterns.Observer;
  */
 public class ObserverDemo {
     public static void main(String[] args) {
-        
+        YouTubeChannel observable = new YouTubeChannel();
+        ChannelSubscriber observer = new ChannelSubscriber();
+
+        observable.addPropertyChangeListener(observer);
+        observable.uploadVideo("Solving 10000 piece puzzle in a day!");
     }
 }
